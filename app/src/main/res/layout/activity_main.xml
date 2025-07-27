@@ -12,145 +12,196 @@
         android:id="@+id/equalizerTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:text="Equalizador de Áudio"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!-- Grave -->
     <TextView
         android:id="@+id/bassLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:text="Graves"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/equalizerTitle"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="32dp"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/equalizerTitle" />
 
     <SeekBar
         android:id="@+id/bassSeekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:max="100"
         android:progress="50"
-        app:layout_constraintTop_toBottomOf="@+id/bassLabel"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bassLabel" />
 
     <!-- Médio -->
     <TextView
         android:id="@+id/midLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Médios"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/bassSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/bassSeekBar" />
 
     <SeekBar
         android:id="@+id/midSeekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:max="100"
         android:progress="50"
-        app:layout_constraintTop_toBottomOf="@+id/midLabel"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/midLabel" />
 
     <!-- Agudo -->
     <TextView
         android:id="@+id/trebleLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
         android:text="Agudos"
         android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@+id/midSeekBar"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="24dp"
-        android:layout_marginStart="16dp"/>
+        app:layout_constraintTop_toBottomOf="@+id/midSeekBar" />
 
     <SeekBar
         android:id="@+id/trebleSeekBar"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
         android:max="100"
         android:progress="50"
-        app:layout_constraintTop_toBottomOf="@+id/trebleLabel"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="8dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trebleLabel" />
+
 
     <TextView
         android:id="@+id/speedLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Velocidade Atual: -- km/h"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trebleSeekBar" />
+
+    <TextView
+        android:id="@+id/speedLabel2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Temperatura: --  °C"
+        android:textSize="17sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.938"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trebleSeekBar" />
+
+    <TextView
+        android:id="@+id/speedLabel3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:text="Gasolina: --%"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/trebleSeekBar"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintHorizontal_bias="0.851"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trebleSeekBar" />
 
     <Button
         android:id="@+id/readSpeedButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Atualizar Velocidade"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"
+        android:text="Obter velocidade"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/speedLabel"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.167"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedLabel" />
+
+    <Button
+        android:id="@+id/readSpeedButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Obter temperatura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.952"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedLabel2" />
 
     <TextView
         android:id="@+id/canVolumeLabel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
         android:text="Volume CAN: --"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/readSpeedButton"
-        android:layout_marginTop="32dp" />
+        app:layout_constraintHorizontal_bias="0.192"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/readSpeedButton" />
 
     <Button
         android:id="@+id/sendCanVolumeButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Enviar Volume CAN (Simulado)"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="192dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="Simular Volume CAN "
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/canVolumeLabel"
-        android:layout_marginTop="16dp" />
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/canVolumeLabel" />
 
-
+    <Button
+        android:id="@+id/sendCanVolumeButton2"
+        android:layout_width="192dp"
+        android:layout_height="52dp"
+        android:layout_marginTop="12dp"
+        android:text="Obter nível de Combustivel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/speedLabel3" />
 
     <TextView
         android:id="@+id/nativeStatusTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
         android:text="Status Nativo: Carregando..."
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginBottom="16dp" />
+        app:layout_constraintStart_toStartOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
