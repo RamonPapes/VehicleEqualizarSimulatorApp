@@ -35,6 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private val speedSensorSimulator = VehicleSensorSimulator("Velocidade")
     private val temperatureSensorSimulator = VehicleSensorSimulator("Temperatura Externa")
+    private val fuelSensorSimulator = VehicleSensorSimulator("Temperatura Externa")
     private val vehicleCanBusSimulator = VehicleCanBusSimulator()
     private val activityScope = CoroutineScope(Dispatchers.Main)
 
@@ -77,6 +78,20 @@ class MainActivity : AppCompatActivity() {
             Log.d(TAG, "Velocidade lida: $currentSpeed km/h")
         }
 
+        // Lê temperatura
+        readTemperatureButton.setOnClickListener {
+            val currentTemp = temperatureSensorSimulator.readSensorData()
+            temperatureLabel.text = "Temperatura: $currentTemp ºC"
+            Log.d(TAG, "Temperatura lida: $currentTemp ºC")
+        }
+
+        // Simula nível de combustível
+        readFuelButton.setOnClickListener {
+            val fuelLevel = fuelSensorSimulator.readSensorData()
+            fuelLabel.text = "Gasolina: $fuelLevel%"
+            Log.d(TAG, "Nível de combustível lido: $fuelLevel%")
+        }
+
         // Simula o volume CAN
         sendCanVolumeButton.setOnClickListener {
             val randomVolume = (0..100).random()
@@ -92,20 +107,6 @@ class MainActivity : AppCompatActivity() {
                     canVolumeLabel.text = "Volume CAN: $volume"
                 }
             }
-        }
-
-        // Lê temperatura
-        readTemperatureButton.setOnClickListener {
-            val currentTemp = temperatureSensorSimulator.readSensorData()
-            temperatureLabel.text = "Temperatura: $currentTemp ºC"
-            Log.d(TAG, "Temperatura lida: $currentTemp ºC")
-        }
-
-        // Simula nível de combustível
-        readFuelButton.setOnClickListener {
-            val fuelLevel = (0..100).random()
-            fuelLabel.text = "Gasolina: $fuelLevel%"
-            Log.d(TAG, "Nível de combustível lido: $fuelLevel%")
         }
     }
 
