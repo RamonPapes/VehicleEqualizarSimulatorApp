@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     private val speedSensorSimulator = VehicleSensorSimulator("Velocidade")
     private val temperatureSensorSimulator = VehicleSensorSimulator("Temperatura Externa")
-    private val fuelSensorSimulator = VehicleSensorSimulator("Temperatura Externa")
+    private val fuelSensorSimulator = VehicleSensorSimulator("Nível Combustível")
     private val vehicleCanBusSimulator = VehicleCanBusSimulator()
     private val activityScope = CoroutineScope(Dispatchers.Main)
 
